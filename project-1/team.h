@@ -13,9 +13,17 @@ class team
 public:
     team();
 
+
 private:
     string name;
     string stadium;
+    int seatingCapacity;
+    string location;
+    string conference;
+    string division;
+    string surface;
+    string roof;
+    string openDate;
 
 };
 
