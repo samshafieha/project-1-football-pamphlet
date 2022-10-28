@@ -10,10 +10,12 @@ CONFIG += c++11
 
 SOURCES += \
     main.cpp \
-    dialog.cpp
+    dialog.cpp \
+    team.cpp
 
 HEADERS += \
-    dialog.h
+    dialog.h \
+    team.h
 
 FORMS += \
     dialog.ui
