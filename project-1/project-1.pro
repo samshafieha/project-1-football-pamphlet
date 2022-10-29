@@ -9,15 +9,18 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    desplayteam.cpp \
     main.cpp \
     dialog.cpp \
     team.cpp
 
 HEADERS += \
+    desplayteam.h \
     dialog.h \
     team.h
 
 FORMS += \
+    desplayteam.ui \
     dialog.ui
 
 # Default rules for deployment.

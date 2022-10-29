@@ -1,6 +1,7 @@
 #include "dialog.h"
 
 #include <QApplication>
+#include <QLabel>
 #include <fstream>
 
 int main(int argc, char *argv[])
