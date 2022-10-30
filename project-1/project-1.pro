@@ -15,7 +15,10 @@ SOURCES += \
     team.cpp
 
 HEADERS += \
+<<<<<<< HEAD
     desplayteam.h \
+=======
+>>>>>>> main
     dialog.h \
     team.h
 
