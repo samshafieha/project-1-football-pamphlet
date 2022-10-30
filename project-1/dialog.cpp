@@ -1,5 +1,6 @@
 #include "dialog.h"
 #include "ui_dialog.h"
+#include "desplayteam.h"
 
 Dialog::Dialog(QWidget *parent)
     : QDialog(parent)
@@ -11,5 +12,13 @@ Dialog::Dialog(QWidget *parent)
 Dialog::~Dialog()
 {
     delete ui;
+}
+
+
+void Dialog::on_pushButton_clicked()
+{
+    desplayTeam desplayteam;
+    desplayteam.setModal(true);
+    desplayteam.exec();
 }
 

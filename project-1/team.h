@@ -5,14 +5,17 @@
 #include <QObject>
 #include <QWidget>
 #include <string>
+#include <vector>
 
 using namespace std;
 
 class team
 {
 public:
-    team();
+    team(string name);
+    vector<team> getTeam();
 
+    string getName();
 
 private:
     string name;
