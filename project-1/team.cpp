@@ -1,6 +1,5 @@
 #include "team.h"
 
-<<<<<<< HEAD
 team::team(string name)
 {
     this->name = name;
@@ -8,9 +7,4 @@ team::team(string name)
 
 string team::getName(){
     return name;
-=======
-team::team()
-{
-
->>>>>>> main
 }
