@@ -10,7 +10,5 @@ int main(int argc, char *argv[])
     Dialog w;
     w.show();
 
-    QString x = "TESTING";
-
     return a.exec();
 }
