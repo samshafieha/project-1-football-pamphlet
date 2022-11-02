@@ -17,7 +17,21 @@
    <item>
     <widget class="QPushButton" name="pushButton">
      <property name="text">
-      <string>Display all teams</string>
+      <string>Desplay all teams</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="text">
+      <string>Help</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="text">
+      <string>Contact Us</string>
      </property>
     </widget>
    </item>
