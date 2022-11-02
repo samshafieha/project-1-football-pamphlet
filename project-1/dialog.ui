@@ -17,7 +17,7 @@
    <item>
     <widget class="QPushButton" name="pushButton">
      <property name="text">
-      <string>Desplay all teams</string>
+      <string>Display all teams</string>
      </property>
     </widget>
    </item>

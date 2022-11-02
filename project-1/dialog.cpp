@@ -1,6 +1,6 @@
 #include "dialog.h"
 #include "ui_dialog.h"
-#include "desplayteam.h"
+#include "displayteam.h"
 
 Dialog::Dialog(QWidget *parent)
     : QDialog(parent)
