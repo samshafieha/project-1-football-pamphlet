@@ -2,6 +2,9 @@
 #define DESPLAYTEAM_H
 
 #include <QDialog>
+#include <QFile>
+#include <QFileDialog>
+#include <QTextStream>
 #include "team.h"
 
 namespace Ui {
