@@ -25,8 +25,7 @@ private slots:
 
 private:
     Ui::desplayTeam *ui;
-    vector <team*>americanTeam;
-    vector <team*>nationalTeam;
+    team *teams;
 };
 
 #endif // DESPLAYTEAM_H
