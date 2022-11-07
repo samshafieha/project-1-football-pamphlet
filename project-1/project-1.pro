@@ -17,6 +17,7 @@ SOURCES += \
     team.cpp
 
 HEADERS += \
+    contactdialog.h \
     desplayteam.h \
     dialog.h \
     helpdialog.h \
