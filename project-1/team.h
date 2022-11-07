@@ -4,7 +4,6 @@
 #include <QMainWindow>
 #include <QObject>
 #include <QWidget>
-#include <string>
 #include <vector>
 
 using namespace std;
@@ -12,21 +11,22 @@ using namespace std;
 class team
 {
 public:
-    team(string name);
+    team();
     vector<team> getTeam();
-
-    string getName();
+    void setName(QString name);
+    void setStaduim(QString stadium);
+    QString getName();
 
 private:
-    string name;
-    string stadium;
+    QString name;
+    QString stadium;
     int seatingCapacity;
-    string location;
-    string conference;
-    string division;
-    string surface;
-    string roof;
-    string openDate;
+    QString location;
+    QString conference;
+    QString division;
+    QString surface;
+    QString roof;
+    QString openDate;
 
 };
 

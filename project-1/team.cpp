@@ -1,10 +1,18 @@
 #include "team.h"
 
-team::team(string name)
+team::team()
 {
+
+}
+
+QString team::getName(){
+    return name;
+}
+
+void team::setName(QString name){
     this->name = name;
 }
 
-string team::getName(){
-    return name;
+void team::setStaduim(QString stadium){
+    this->stadium = stadium;
 }

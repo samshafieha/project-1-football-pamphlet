@@ -29,7 +29,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QTextBrowser" name="textBrowser"/>
+    <widget class="QTableWidget" name="tableWidget"/>
    </item>
   </layout>
  </widget>

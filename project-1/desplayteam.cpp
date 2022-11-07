@@ -1,22 +1,12 @@
 #include "desplayteam.h"
 #include "ui_desplayteam.h"
-#include <string>
-#include <fstream>
-using namespace std;
 
 desplayTeam::desplayTeam(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::desplayTeam)
 {
     ui->setupUi(this);
-    ifstream fin;
-
-    fin.open("NFL Information.csv");
-    string name;
-    fin.ignore(1000, '\n');
-    getline(fin, name, ',');
-    americanTeam.push_back(new team(name));
-    fin.close();
+    teams = new team[35];
 }
 
 desplayTeam::~desplayTeam()
@@ -27,12 +17,32 @@ desplayTeam::~desplayTeam()
 
 void desplayTeam::on_pushButton_2_clicked() //display teams (unsorted)
 {
-    string name;
-        ifstream fin;
-        fin.open("NFL Information.csv");
-        fin.ignore(1000, '\n');
-        getline (fin, name, ',');
-   QString toQString = QString::fromStdString(name);
-    ui->textBrowser->setText(toQString);
-    fin.close();
+    QString path = "C:/Users/samsh/Desktop/pdfs/Fall 2022/CS 1C/Qt Projects/project-1-football-pamphlet/project-1/NFL Information.csv";
+    QFile file(path);
+    file.open(QIODevice::ReadOnly);
+
+    QStringList wordList;
+    QTextStream inFile(&file);
+    int row = 0;
+    QString readLine = inFile.readLine();
+    QStringList listValue = readLine.split(',');
+    ui->tableWidget->setColumnCount(listValue.size());
+    ui->tableWidget->setHorizontalHeaderLabels(listValue);
+
+    int teamIndex = 0;
+    while (!inFile.atEnd()){
+        QString readLine = inFile.readLine();
+        QStringList listValue = readLine.split(',');
+
+        row++;
+        ui->tableWidget->setRowCount(row);
+        for (int col = 0; col < listValue.size(); col++){
+            ui->tableWidget->setItem(row-1, col, new QTableWidgetItem(listValue[col]));
+            if (col == 0){teams[teamIndex].setName(listValue[col]);}
+            else if (col == 1){teams[teamIndex].setStaduim(listValue[col]);}
+        }
+        teamIndex++;
+    }
+    file.flush();
+    file.close();
 }
