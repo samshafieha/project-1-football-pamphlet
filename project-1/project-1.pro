@@ -9,7 +9,9 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    contactdialog.cpp \
     desplayteam.cpp \
+    helpdialog.cpp \
     main.cpp \
     dialog.cpp \
     team.cpp
@@ -17,11 +19,14 @@ SOURCES += \
 HEADERS += \
     desplayteam.h \
     dialog.h \
+    helpdialog.h \
     team.h
 
 FORMS += \
+    contactdialog.ui \
     desplayteam.ui \
-    dialog.ui
+    dialog.ui \
+    helpdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
