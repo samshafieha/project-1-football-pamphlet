@@ -12,6 +12,7 @@ SOURCES += \
     contactdialog.cpp \
     desplayteam.cpp \
     helpdialog.cpp \
+    login.cpp \
     main.cpp \
     dialog.cpp \
     team.cpp
@@ -21,13 +22,15 @@ HEADERS += \
     desplayteam.h \
     dialog.h \
     helpdialog.h \
+    login.h \
     team.h
 
 FORMS += \
     contactdialog.ui \
     desplayteam.ui \
     dialog.ui \
-    helpdialog.ui
+    helpdialog.ui \
+    login.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
