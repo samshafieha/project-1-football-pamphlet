@@ -17,8 +17,8 @@ public:
     void setName(QString name);
     QString getStaduim();
     void setStaduim(QString stadium);
-    QString getSeating();
-    int setSeating(int seatingCapacity);
+    int getSeating();
+    void setSeating(int seatingCapacity);
     QString getLocation();
     void setLocation(QString location);
     QString getConference();

@@ -10,51 +10,51 @@ QString team::getName(){
 void team::setName(QString name){
     this->name = name;
 }
-QString getStaduim(){
+QString team::getStaduim(){
     return stadium;
 }
 void team::setStaduim(QString stadium){
     this->stadium = stadium;
 }
-QString getSeating(){
+int team::getSeating(){
     return seatingCapacity;
 }
-int setSeating(int seatingCapacity){
+void team::setSeating(int seatingCapacity){
     this->seatingCapacity = seatingCapacity;
 }
-QString getLocation(){
+QString team::getLocation(){
     return location;
 }
-void setLocation(QString location){
+void team::setLocation(QString location){
     this->location = location;
 }
-QString getConference(){
+QString team::getConference(){
     return conference;
 }
-void setConference(QString conference){
+void team::setConference(QString conference){
     this->conference = conference;
 }
-QString getDivision(){
+QString team::getDivision(){
     return division;
 }
-void setDivision(QString division){
+void team::setDivision(QString division){
     this->division = division;
 }
-QString getSurface(){
+QString team::getSurface(){
     return surface;
 }
-void setSurface(QString surface){
+void team::setSurface(QString surface){
     this->surface = surface;
 }
-QString getRoof(){
+QString team::getRoof(){
     return roof;
 }
-void setRoof(QString roof){
+void team::setRoof(QString roof){
     this->roof = roof;
 }
-QString getOpenDate(){
+QString team::getOpenDate(){
     return openDate;
 }
-void setOpenDate(QString openDate){
+void team::setOpenDate(QString openDate){
     this->openDate = openDate;
 }
