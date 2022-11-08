@@ -6,7 +6,8 @@ desplayTeam::desplayTeam(QWidget *parent) :
     ui(new Ui::desplayTeam)
 {
     ui->setupUi(this);
-    teams = new team[35];
+    size = 35;
+    teams = new team[size];
 }
 
 desplayTeam::~desplayTeam()
@@ -46,3 +47,24 @@ void desplayTeam::on_pushButton_2_clicked() //display teams (unsorted)
     file.flush();
     file.close();
 }
+
+void desplayTeam::on_pushButton_clicked()
+{
+    QString temp;
+
+    for (int i = 0; i < size; i++){
+        if ((i+1) == size){break;}
+        if (teams[i].getName() > teams[i+1].getName()){
+            temp = teams[i+1].getName();
+            teams[i+1].getName() = teams[i].getName();
+            teams[i].getName() = temp;
+        }
+    }
+
+    for (int row = 0; row < ui->tableWidget->rowCount(); row++){
+        for (int col = 0; col < ui->tableWidget->columnCount(); col++){
+            //TO BE IMPLEMENTED...
+        }
+    }
+}
+
