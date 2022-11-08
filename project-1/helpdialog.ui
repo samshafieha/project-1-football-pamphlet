@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>HelpDialog</class>
  <widget class="QDialog" name="HelpDialog">
@@ -5,13 +6,46 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>674</width>
+    <height>483</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QPlainTextEdit" name="plainTextEdit">
+     <property name="plainText">
+      <string>HELP MENU
+
+1.  Click on Login and type in the correct username and password in order to use this pamphlet.
+
+2.  Click on Display teams to open more options in the pamphlet. 
+
+3.  After clicking on Display Teams,  click on Display Original Order to display each team as it is listed.
+
+4.  Click on Sort By Team Name to show a list of all the teams in alphabetical order.
+
+5.  Click on Sort By Stadium to show a list of all the teams listed by the stadium names in alphabetical order.
+
+6.  Click on Sort By Seating to show a list of all the teams sorted from highest to lowest based on their seating capacity.
+
+7.  Click on Total Capacity to show the total capacity of the entire National Football Legaue.
+
+8.  Click on Sort By Location to show a list of all the teams listed alphabetically by their stadium location.
+
+9.  Click on Sort by American Conference to show a list sorted by team name.
+
+10.  Click on Display Updated Teams to sort all the teams plus the new teams.
+
+11.  Click on Updated Total Capcity to include a list of teams with the updated teams.
+
+12.  If you have any questions or concerns,  close this menu and go back to the Contact Us button to email or call us for any help needed.</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
