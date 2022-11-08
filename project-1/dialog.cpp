@@ -3,6 +3,7 @@
 #include "desplayteam.h"
 #include "helpdialog.h"
 #include "contactdialog.h"
+#include "login.h"
 
 Dialog::Dialog(QWidget *parent)
     : QDialog(parent)
@@ -38,5 +39,13 @@ void Dialog::on_pushButton_3_clicked()
     ContactDialog contactdialog;
     contactdialog.setModal(true);
     contactdialog.exec();
+}
+
+
+void Dialog::on_pushButton_4_clicked()
+{
+    Login logindialog;
+    logindialog.setModal(true);
+    logindialog.exec();
 }
 
