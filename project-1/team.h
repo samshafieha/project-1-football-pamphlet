@@ -13,9 +13,24 @@ class team
 public:
     team();
     vector<team> getTeam();
-    void setName(QString name);
-    void setStaduim(QString stadium);
     QString getName();
+    void setName(QString name);
+    QString getStaduim();
+    void setStaduim(QString stadium);
+    QString getSeating();
+    int setSeating(int seatingCapacity);
+    QString getLocation();
+    void setLocation(QString location);
+    QString getConference();
+    void setConference(QString conference);
+    QString getDivision();
+    void setDivision(QString division);
+    QString getSurface();
+    void setSurface(QString surface);
+    QString getRoof();
+    void setRoof(QString roof);
+    QString getOpenDate();
+    void setOpenDate(QString openDate);
 
 private:
     QString name;
