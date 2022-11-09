@@ -6,7 +6,7 @@ desplayTeam::desplayTeam(QWidget *parent) :
     ui(new Ui::desplayTeam)
 {
     ui->setupUi(this);
-    size = 35;
+    size = 33;
     teams = new team[size];
 }
 
@@ -55,19 +55,24 @@ void desplayTeam::on_pushButton_2_clicked() //display teams (unsorted)
     file.close();
 }
 
-void desplayTeam::on_pushButton_clicked()
+void desplayTeam::on_pushButton_clicked() //sort by team name
 {
     team temp;
-
     for (int i = 0; i < size; i++){
-        if ((i+1) == size){break;}
-        if (teams[i].getName() > teams[i+1].getName()){
-            temp = teams[i+1];
-            teams[i+1] = teams[i];
-            teams[i] = temp;
+        for (int j = i + 1; j < size; j++){
+            if(teams[i].getName()>teams[j].getName()){
+                temp = teams[i];
+                teams[i] = teams[j];
+                teams[j] = temp;
+            }
         }
     }
 
+    displayInfo();
+
+}
+
+void desplayTeam::displayInfo(){
     for (int row = 0; row < ui->tableWidget->rowCount(); row++){
         for (int col = 0; col < ui->tableWidget->columnCount(); col++){
             if (col == 0){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getName()));}
@@ -81,5 +86,22 @@ void desplayTeam::on_pushButton_clicked()
             else if (col == 8){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getOpenDate()));}
         }
     }
+}
+
+void desplayTeam::on_pushButton_3_clicked() //sort by stadium name
+{
+    team temp;
+
+    for (int i = 0; i < size; i++){
+        for (int j = i + 1; j < size; j++){
+            if(teams[i].getStaduim() > teams[j].getStaduim()){
+                temp = teams[i];
+                teams[i] = teams[j];
+                teams[j] = temp;
+            }
+        }
+    }
+
+    displayInfo();
 }
 
