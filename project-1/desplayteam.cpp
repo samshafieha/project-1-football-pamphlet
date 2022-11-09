@@ -1,5 +1,6 @@
 #include "desplayteam.h"
 #include "ui_desplayteam.h"
+#include "addteam.h"
 
 desplayTeam::desplayTeam(QWidget *parent) :
     QDialog(parent),
@@ -141,5 +142,13 @@ void desplayTeam::on_pushButton_5_clicked() //sort by seating capacity
     //ui->tableWidget->setItem(ui->tableWidget->rowCount(), ui->tableWidget->columnCount(), new QTableWidgetItem(QString::number(totalCapacity)));
     ui->pushButton_5->setText("Total seating capacity: " + QString::number(totalCapacity));
     displayInfo();
+}
+
+
+void desplayTeam::on_addButton_clicked()
+{
+    addteam addTeam;
+    addTeam.setModal(true);
+    addTeam.exec();
 }
 

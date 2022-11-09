@@ -28,6 +28,8 @@ private slots:
 
     void displayInfo();
 
+    void on_addButton_clicked();
+
 private:
     Ui::desplayTeam *ui;
     int size;
