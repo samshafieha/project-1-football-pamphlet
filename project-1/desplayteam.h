@@ -20,14 +20,21 @@ public:
     ~desplayTeam();
 
 private slots:
-
+    void on_pushButton_clicked();
     void on_pushButton_2_clicked();
-
     void on_pushButton_3_clicked();
+    void on_pushButton_4_clicked();
+    void on_pushButton_5_clicked();
+
+    void displayInfo();
+
+    void on_addButton_clicked();
 
 private:
     Ui::desplayTeam *ui;
+    int size;
     team *teams;
+    int totalCapacity;
 };
 
 #endif // DESPLAYTEAM_H
