@@ -8,6 +8,7 @@ desplayTeam::desplayTeam(QWidget *parent) :
     ui->setupUi(this);
     size = 33;
     teams = new team[size];
+    totalCapacity = 0;
 }
 
 desplayTeam::~desplayTeam()
@@ -15,6 +16,21 @@ desplayTeam::~desplayTeam()
     delete ui;
 }
 
+void desplayTeam::displayInfo(){
+    for (int row = 0; row < ui->tableWidget->rowCount(); row++){
+        for (int col = 0; col < ui->tableWidget->columnCount(); col++){
+            if (col == 0){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getName()));}
+            else if (col == 1){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getStaduim()));}
+            else if (col == 2){ui->tableWidget->setItem(row, col, new QTableWidgetItem(QString::number(teams[row].getSeating())));}
+            else if (col == 3){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getLocation()));}
+            else if (col == 4){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getConference()));}
+            else if (col == 5){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getDivision()));}
+            else if (col == 6){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getSurface()));}
+            else if (col == 7){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getRoof()));}
+            else if (col == 8){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getOpenDate()));}
+        }
+    }
+}
 
 void desplayTeam::on_pushButton_2_clicked() //display teams (unsorted)
 {
@@ -41,7 +57,8 @@ void desplayTeam::on_pushButton_2_clicked() //display teams (unsorted)
             ui->tableWidget->setItem(row-1, col, new QTableWidgetItem(listValue[col]));
             if (col == 0){teams[teamIndex].setName(listValue[col]);}
             else if (col == 1){teams[teamIndex].setStaduim(listValue[col]);}
-            else if (col == 2){teams[teamIndex].setSeating(listValue[col].toInt());}
+            else if (col == 2){teams[teamIndex].setSeating(listValue[col].toInt());
+                               totalCapacity += listValue[col].toInt();}
             else if (col == 3){teams[teamIndex].setLocation(listValue[col]);}
             else if (col == 4){teams[teamIndex].setConference(listValue[col]);}
             else if (col == 5){teams[teamIndex].setDivision(listValue[col]);}
@@ -72,22 +89,6 @@ void desplayTeam::on_pushButton_clicked() //sort by team name
 
 }
 
-void desplayTeam::displayInfo(){
-    for (int row = 0; row < ui->tableWidget->rowCount(); row++){
-        for (int col = 0; col < ui->tableWidget->columnCount(); col++){
-            if (col == 0){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getName()));}
-            else if (col == 1){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getStaduim()));}
-            else if (col == 2){ui->tableWidget->setItem(row, col, new QTableWidgetItem(QString::number(teams[row].getSeating())));}
-            else if (col == 3){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getLocation()));}
-            else if (col == 4){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getConference()));}
-            else if (col == 5){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getDivision()));}
-            else if (col == 6){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getSurface()));}
-            else if (col == 7){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getRoof()));}
-            else if (col == 8){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getOpenDate()));}
-        }
-    }
-}
-
 void desplayTeam::on_pushButton_3_clicked() //sort by stadium name
 {
     team temp;
@@ -106,7 +107,7 @@ void desplayTeam::on_pushButton_3_clicked() //sort by stadium name
 }
 
 
-void desplayTeam::on_pushButton_4_clicked()
+void desplayTeam::on_pushButton_4_clicked() //sort by location
 {
     team temp;
 
@@ -124,7 +125,7 @@ void desplayTeam::on_pushButton_4_clicked()
 }
 
 
-void desplayTeam::on_pushButton_5_clicked()
+void desplayTeam::on_pushButton_5_clicked() //sort by seating capacity
 {
     team temp;
 
@@ -137,7 +138,8 @@ void desplayTeam::on_pushButton_5_clicked()
             }
         }
     }
-
+    //ui->tableWidget->setItem(ui->tableWidget->rowCount(), ui->tableWidget->columnCount(), new QTableWidgetItem(QString::number(totalCapacity)));
+    ui->pushButton_5->setText("Total seating capacity: " + QString::number(totalCapacity));
     displayInfo();
 }
 
