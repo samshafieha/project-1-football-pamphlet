@@ -1,5 +1,6 @@
 #include "desplayteam.h"
 #include "ui_desplayteam.h"
+#include "addteam.h"
 
 desplayTeam::desplayTeam(QWidget *parent) :
     QDialog(parent),
@@ -46,3 +47,11 @@ void desplayTeam::on_pushButton_2_clicked() //display teams (unsorted)
     file.flush();
     file.close();
 }
+
+void desplayTeam::on_pushButton_3_clicked()
+{
+    addteam addTeam;
+    addTeam.setModal(true);
+    addTeam.exec();
+}
+

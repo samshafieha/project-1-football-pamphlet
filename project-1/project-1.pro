@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    addteam.cpp \
     contactdialog.cpp \
     desplayteam.cpp \
     helpdialog.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
     team.cpp
 
 HEADERS += \
+    addteam.h \
     contactdialog.h \
     desplayteam.h \
     dialog.h \
@@ -26,6 +28,7 @@ HEADERS += \
     team.h
 
 FORMS += \
+    addteam.ui \
     contactdialog.ui \
     desplayteam.ui \
     dialog.ui \
