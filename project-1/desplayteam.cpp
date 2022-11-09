@@ -41,6 +41,13 @@ void desplayTeam::on_pushButton_2_clicked() //display teams (unsorted)
             ui->tableWidget->setItem(row-1, col, new QTableWidgetItem(listValue[col]));
             if (col == 0){teams[teamIndex].setName(listValue[col]);}
             else if (col == 1){teams[teamIndex].setStaduim(listValue[col]);}
+            else if (col == 2){teams[teamIndex].setSeating(listValue[col].toInt());}
+            else if (col == 3){teams[teamIndex].setLocation(listValue[col]);}
+            else if (col == 4){teams[teamIndex].setConference(listValue[col]);}
+            else if (col == 5){teams[teamIndex].setDivision(listValue[col]);}
+            else if (col == 6){teams[teamIndex].setSurface(listValue[col]);}
+            else if (col == 7){teams[teamIndex].setRoof(listValue[col]);}
+            else if (col == 8){teams[teamIndex].setOpenDate(listValue[col]);}
         }
         teamIndex++;
     }
@@ -50,20 +57,28 @@ void desplayTeam::on_pushButton_2_clicked() //display teams (unsorted)
 
 void desplayTeam::on_pushButton_clicked()
 {
-    QString temp;
+    team temp;
 
     for (int i = 0; i < size; i++){
         if ((i+1) == size){break;}
         if (teams[i].getName() > teams[i+1].getName()){
-            temp = teams[i+1].getName();
-            teams[i+1].getName() = teams[i].getName();
-            teams[i].getName() = temp;
+            temp = teams[i+1];
+            teams[i+1] = teams[i];
+            teams[i] = temp;
         }
     }
 
     for (int row = 0; row < ui->tableWidget->rowCount(); row++){
         for (int col = 0; col < ui->tableWidget->columnCount(); col++){
-            //TO BE IMPLEMENTED...
+            if (col == 0){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getName()));}
+            else if (col == 1){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getStaduim()));}
+            else if (col == 2){ui->tableWidget->setItem(row, col, new QTableWidgetItem(QString::number(teams[row].getSeating())));}
+            else if (col == 3){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getLocation()));}
+            else if (col == 4){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getConference()));}
+            else if (col == 5){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getDivision()));}
+            else if (col == 6){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getSurface()));}
+            else if (col == 7){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getRoof()));}
+            else if (col == 8){ui->tableWidget->setItem(row, col, new QTableWidgetItem(teams[row].getOpenDate()));}
         }
     }
 }
