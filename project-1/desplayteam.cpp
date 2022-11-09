@@ -105,3 +105,39 @@ void desplayTeam::on_pushButton_3_clicked() //sort by stadium name
     displayInfo();
 }
 
+
+void desplayTeam::on_pushButton_4_clicked()
+{
+    team temp;
+
+    for (int i = 0; i < size; i++){
+        for (int j = i + 1; j < size; j++){
+            if(teams[i].getLocation() > teams[j].getLocation()){
+                temp = teams[i];
+                teams[i] = teams[j];
+                teams[j] = temp;
+            }
+        }
+    }
+
+    displayInfo();
+}
+
+
+void desplayTeam::on_pushButton_5_clicked()
+{
+    team temp;
+
+    for (int i = 0; i < size; i++){
+        for (int j = i + 1; j < size; j++){
+            if(teams[i].getSeating() > teams[j].getSeating()){
+                temp = teams[i];
+                teams[i] = teams[j];
+                teams[j] = temp;
+            }
+        }
+    }
+
+    displayInfo();
+}
+
