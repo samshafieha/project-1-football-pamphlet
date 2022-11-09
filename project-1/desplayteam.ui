@@ -31,6 +31,13 @@
    <item>
     <widget class="QTableWidget" name="tableWidget"/>
    </item>
+   <item>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="text">
+      <string>Add new team</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <resources/>
