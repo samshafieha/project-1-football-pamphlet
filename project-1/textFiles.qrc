@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>NFL.txt</file>
+        <file>NFLExpansionTeam.txt</file>
+    </qresource>
+</RCC>
