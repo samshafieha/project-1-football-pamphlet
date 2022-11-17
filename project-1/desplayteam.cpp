@@ -33,7 +33,7 @@ void desplayTeam::displayInfo(){
     }
 }
 
-void desplayTeam::on_pushButton_2_clicked() //display teams (unsorted)
+void desplayTeam::on_pushButton_2_clicked() //display teams (sorted by team name)
 {
     QString path = "C:/Users/samsh/Desktop/pdfs/Fall 2022/CS 1C/Qt Projects/project-1-football-pamphlet/project-1/NFL Information.csv";
     QFile file(path);
@@ -73,25 +73,9 @@ void desplayTeam::on_pushButton_2_clicked() //display teams (unsorted)
     file.close();
 }
 
-void desplayTeam::on_pushButton_clicked() //sort by team name
-{
-    team temp;
-    for (int i = 0; i < size; i++){
-        for (int j = i + 1; j < size; j++){
-            if(teams[i].getName()>teams[j].getName()){
-                temp = teams[i];
-                teams[i] = teams[j];
-                teams[j] = temp;
-            }
-        }
-    }
-
-    displayInfo();
-
-}
-
 void desplayTeam::on_pushButton_3_clicked() //sort by stadium name
 {
+    desplayTeam::on_pushButton_2_clicked();
     team temp;
 
     for (int i = 0; i < size; i++){
@@ -110,6 +94,7 @@ void desplayTeam::on_pushButton_3_clicked() //sort by stadium name
 
 void desplayTeam::on_pushButton_4_clicked() //sort by location
 {
+    desplayTeam::on_pushButton_2_clicked();
     team temp;
 
     for (int i = 0; i < size; i++){
@@ -128,6 +113,7 @@ void desplayTeam::on_pushButton_4_clicked() //sort by location
 
 void desplayTeam::on_pushButton_5_clicked() //sort by seating capacity
 {
+    desplayTeam::on_pushButton_2_clicked();
     team temp;
 
     for (int i = 0; i < size; i++){
