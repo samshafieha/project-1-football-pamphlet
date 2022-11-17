@@ -17,35 +17,28 @@
    <item>
     <widget class="QPushButton" name="pushButton_2">
      <property name="text">
-      <string>Display original order (unsorted)</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QPushButton" name="pushButton">
-     <property name="text">
-      <string>Sort by team name</string>
+      <string>Display list sorted by team name</string>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QPushButton" name="pushButton_3">
      <property name="text">
-      <string>Sort by stadium name </string>
+      <string>Display list sorted by stadium name </string>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QPushButton" name="pushButton_4">
      <property name="text">
-      <string>Sort by location</string>
+      <string>Display list sorted by location</string>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QPushButton" name="pushButton_5">
      <property name="text">
-      <string>Sort by seating capacity</string>
+      <string>Display list sorted by seating capacity</string>
      </property>
     </widget>
    </item>
@@ -62,5 +55,70 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>desplayTeam</receiver>
+   <slot>showMaximized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>25</x>
+     <y>16</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>desplayTeam</receiver>
+   <slot>showMaximized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>21</x>
+     <y>46</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-5</x>
+     <y>60</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>desplayTeam</receiver>
+   <slot>showMaximized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>31</x>
+     <y>77</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-10</x>
+     <y>94</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>desplayTeam</receiver>
+   <slot>showMaximized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>36</x>
+     <y>99</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-2</x>
+     <y>120</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
