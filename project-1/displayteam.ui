@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>desplayTeam</class>
+ <widget class="QDialog" name="desplayTeam">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>641</width>
+    <height>426</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="text">
+      <string>Display original order (unsorted)</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Sort by team name</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QListWidget" name="listWidget">
+     <item>
+      <property name="text">
+       <string>Arizona Cardinals</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Atlanta Falcons</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Baltimore Ravens</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Buffalo Bills</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Carolina Panthers</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Chicago Bears</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Cincinnati Bengals</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Cleveland Browns</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Dallas Cowboys</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Denver Broncos</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Detroit Lions</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Green Bay Packers</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Houston Texans</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Indianapolis Colts</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Jacksonville Jaguars</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Kansas City Chiefs</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Las Vegas Raiders</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Los Angeles Chargers</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Los Angeles Rams</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Miami Dolphins</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Minnesota Vikings</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>New England Patriots</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>New Orleans</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>New York Giants</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>New York Jets</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Philadelphia Eagles</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Pittsburgh Steelers</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>San Francisco 49ers</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Seattle Seahawks</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tampa Bay Buccaneers</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tennessee Titans</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Washington Football Team</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

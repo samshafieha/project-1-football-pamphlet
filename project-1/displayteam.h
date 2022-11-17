@@ -1,5 +1,5 @@
-#ifndef DESPLAYTEAM_H
-#define DESPLAYTEAM_H
+#ifndef DISPLAYTEAM_H
+#define DISPLAYTEAM_H
 
 #include <QDialog>
 #include <QFile>
@@ -36,4 +36,4 @@ private:
     int totalCapacity;
 };
 
-#endif // DESPLAYTEAM_H
+#endif // DISPLAYTEAM_H
