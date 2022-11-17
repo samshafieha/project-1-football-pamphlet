@@ -28,13 +28,14 @@ void addteam::on_pushButton_clicked()
     QString roofType = ui->lineEdit_RoofType->text();
     QString dateOpened = ui->lineEdit_DateOpened->text();
 
-       QFile textUpdate("C:/Users/samsh/Desktop/pdfs/Fall 2022/CS 1C/Qt Projects/project-1-football-pamphlet/project-1/NFL Information.csv");
-       if (textUpdate.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append))
+//       QFile textUpdate("C:/Users/samsh/Desktop/pdfs/Fall 2022/CS 1C/Qt Projects/project-1-football-pamphlet/project-1/NFL Information.csv");
+        QFile textUpdate("C:/Users/Yaqub/OneDrive/Desktop/CS1C/Football project/project-1-football-pamphlet/project-1/NFL Information.csv");
+       if (textUpdate.open(QIODevice::ReadWrite | QIODevice::Append))
        {
            QTextStream out(&textUpdate);
-           out << teamName << "    " << stadiumName << "    " << seatingCap << "    " << location
-               << "    " << conference << "    " << division << "    " << surfaceType << "    " << roofType
-               << "    " << dateOpened << endl;
+           out << teamName << "," << stadiumName << "," << seatingCap << "," << location
+               << "," << conference << "," << division << "," << surfaceType << "," << roofType
+               << "," << dateOpened << endl;
            textUpdate.flush();
            textUpdate.close();
        }
